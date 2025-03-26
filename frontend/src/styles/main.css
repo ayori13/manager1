@@ -1,0 +1,100 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Светлая тема (по умолчанию) */
+.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+body.light-theme a { color: #007bff; }
+body.light-theme button { background-color: #007bff; color: white; }
+body.light-theme input[type="text"] { border: 1px solid #ccc; }
+body.light-theme #todo-list li { background-color: #fff; border: 1px solid #ddd; }
+body.light-theme #todo-list li.completed span { text-decoration: line-through; color: #888; }
+
+/* Темная тема */
+.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+body.dark-theme a { color: #64b5f6; }
+body.dark-theme button { background-color: #64b5f6; color: #333; }
+body.dark-theme input[type="text"] { border: 1px solid #555; background-color: #444; color: #f4f4f4; }
+body.dark-theme #todo-list li { background-color: #444; border: 1px solid #555; }
+body.dark-theme #todo-list li.completed span { text-decoration: line-through; color: #aaa; }
+
+
+h1, h2 {
+    text-align: center;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+#loading-indicator {
+    text-align: center;
+    color: #888;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#todo-list li span {
+    flex-grow: 1;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#todo-list li .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.8em;
+    padding: 3px 8px;
+}
